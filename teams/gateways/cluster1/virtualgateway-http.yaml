@@ -13,5 +13,12 @@ spec:
     - http: {}
       port:
         number: 80
+      httpsRedirect: true
+    - http: {}
+      port:
+        number: 443
+      tls:
+        mode: SIMPLE
+        secretName: tls-secret
       allowedRouteTables:
         - host: '*'
